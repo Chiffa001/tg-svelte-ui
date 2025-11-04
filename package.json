@@ -1,6 +1,6 @@
 {
 	"name": "@chiffa001/tg-svelte-ui",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"svelte": "./dist/index.js",
 	"module": "./dist/index.js",
@@ -20,6 +20,7 @@
 		"build": "rm -rf dist && svelte-package && rm -rf .svelte-kit && bun run build:css",
 		"check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
 		"format": "prettier --write .",
+		"publish": "npm publish --access public",
 		"lint": "prettier --check . && eslint ."
 	},
 	"peerDependencies": {
