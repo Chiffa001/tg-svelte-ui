@@ -4,13 +4,14 @@
 
 	type Props = {
 		isOpen: boolean;
-		onClose: () => void;
+		onClose?: () => void;
 		hasCloser?: boolean;
 		fullScreen?: boolean;
 		children: Snippet;
+		withoutAnimation?: boolean;
 	};
 
-	const { isOpen, onClose, hasCloser, fullScreen, children }: Props = $props();
+	const { isOpen, onClose, hasCloser, fullScreen, children, withoutAnimation }: Props = $props();
 
 	const sizeStyles = fullScreen
 		? 'h-full pb-10'
@@ -30,9 +31,11 @@
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			onclick={(e) => e.stopPropagation()}
-			class={`animate-modal-in absolute left-1/2 z-50 flex min-h-[285px]
-             w-full -translate-x-1/2 transform items-center justify-center bg-[#232331] p-3 text-white opacity-0
-             shadow-xl transition-transform duration-300 ${sizeStyles}`}
+			class="absolute left-1/2 z-50 flex min-h-[285px]
+             w-full -translate-x-1/2 transform items-center justify-center bg-[#232331] p-3 text-white
+             shadow-xl transition-transform duration-300 {sizeStyles}"
+			class:animate-modal-in={!withoutAnimation}
+			class:opacity-0={!withoutAnimation}
 		>
 			{#if hasCloser}
 				<button

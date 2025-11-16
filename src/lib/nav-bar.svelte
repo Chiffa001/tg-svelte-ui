@@ -91,7 +91,7 @@
 					</span>
 				{/if}
 				{#if tab.text}
-					<span class:text-white={isActive} class="text-[#A6A6A6">{tab.text}</span>
+					<span class:text-white={isActive} class="text-[#A6A6A6]">{tab.text}</span>
 				{/if}
 			</div>
 		</button>
