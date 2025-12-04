@@ -8,13 +8,15 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 export default defineConfig({
 	plugins: [tailwindcss(), svelte(), tsconfigPaths()],
 	build: {
+		cssCodeSplit: true,
 		lib: {
+			formats: ['es'],
 			entry: 'src/index.ts',
 			name: 'SvelteUI',
 			fileName: 'index'
 		},
 		rollupOptions: {
-			external: ['svelte']
+			external: ['svelte', 'svelte/internal'],
 		}
 	},
 	resolve: {
