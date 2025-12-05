@@ -8,7 +8,7 @@ export default {
 	preprocess: vitePreprocess(),
 	kit: {
 		alias: {
-			'@': path.resolve('./src')
+			'@': path.resolve('./src/lib')
 		}
 	}
 };

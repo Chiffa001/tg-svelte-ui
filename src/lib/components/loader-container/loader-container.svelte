@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Modal from './modal.svelte';
-	import logo from './assets/img/still-waters-logo.webp';
-	import LoaderBar from './loader-bar.svelte';
+	import logo from '@/assets/img/still-waters-logo.webp';
+	import { Modal } from '../modal';
+	import { LoaderBar } from '../loader-bar';
 </script>
 
 <Modal fullScreen isOpen withoutAnimation>

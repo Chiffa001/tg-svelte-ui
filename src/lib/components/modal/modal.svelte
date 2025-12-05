@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type Snippet } from 'svelte';
-	import CrossIcon from './icons/cross-icon.svelte';
+	import CrossIcon from '@/icons/cross-icon.svelte';
 
 	type Props = {
 		isOpen: boolean;
