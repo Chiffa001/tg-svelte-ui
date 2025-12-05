@@ -1,1 +1,1 @@
-export { default as LoaderContainer } from './loader-container.svelte'
+export { default as LoaderContainer } from './loader-container.svelte';
